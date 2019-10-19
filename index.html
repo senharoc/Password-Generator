@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PW-Beta</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+    <!--HERO image-->
+    <section id="hero__container">
+        <div id="hero__logo">
+            <h1>Free Password Generator</h1>
+        </div>
+        <a href="#main"><button id="hero__button">Generate</button></a>
+    </section>
+
+    
+    <!--MAIN password display-->
+    <main id="main">
+        <section class="container__mainDisplay">
+            <div class="container__passwords">
+                <h3 class="Password_heading">08 Characters</h3>
+                <div class="Password_result" id="Password_8" style="user-select: all"></div>
+            </div>
+            <div class="container__passwords">
+                <h3 class="Password_heading">12 Characters</h3>
+                <div class="Password_result" id="Password_12" style="user-select: all"></div>
+            </div>
+            <div class="container__passwords">
+                <h3 class="Password_heading">15 Characters</h3>
+                <div class="Password_result" id="Password_15" style="user-select: all"></div>
+            </div>
+            <div class="container__passwords">
+                <h3 class="Password_heading">24 Characters</h3>
+                <div class="Password_result" id="Password_24" style="user-select: all"></div>
+            </div>
+        </section>
+
+        <button id="Generate_password" onclick="generateALL()">RE-Generate</button>
+    </main>
+
+
+    <!-- More info about passwords etc -->
+    <section class="Container__moreInfo">
+        <p>These passwords consist of a string of symbols that have been randomly built from set categories, using a random selection process whereby each character is selected from one of four catagories: Upper Case, Lower Case, Number and Symbol characters.
+        </p><br>
+        <p><span>Password Generator</span> is completely browser based and generated on your local browser. <span>Password Generator</span> therefore does not keep a copy of your password.</p><br>
+        <p style="color: yellow;font-weight:bold; text-align: center;">Once generated, simply copy and paste your password as required.</p>
+        <br>
+        <br>
+        <br>
+        <h3>What makes a strong password?</h3>
+        <br>
+        <p>A strong password starts with a good mixture of letters, numbers and symbols. Strong passwords
+            refrain
+            from using common
+            dictionary words, while weak passwords are simple words that can be easily guessed by any user.
+            Humans
+            however aren’t your only concern. Automated programs too can perform a dictionary assault on
+            your system, easily identifying a weak password. The use of a strong password can reduce the risk
+            from
+            hackers. Keep in mind, even a strong password does not replace the need for other effective security
+            controls.
+        </p>
+        <br>
+        <br>
+        <br>
+        <h3>Some advice for a strong password:</h3>
+        <br>
+        <h4>Password Length:</h4>
+        <p>There’s no specific minimum password length, but general
+            concensus recommends selecting a
+            password that’s "long enough". Good practice leans towards 10+ characters in length. A
+            longer password would be even better.<span> Free Password Generator</span> provides passwords up to 24
+            characters in length.
+        </p>
+        <br>
+        <h4>Include Letters, Numbers, Symbols:</h4>
+        <p>Use a good mixture of different types of characters to make the password harder to crack.
+        </p>
+        <br>
+        <h4>Don’t reuse your passwords:</h4>
+        <p>Of course, simple to remember only one password
+            for all your logins, but a security breach in one website which holds sensitive personal data (eg: email,
+            social media etc) may quickly expose ALL your personal information stored using the same password.
+        </p>
+        <br>
+        <h4>Refrain from using Dictionary Words:</h4>
+        <p>Strong passwords keep well away from common dictionary words where possible. A single word
+            on its own is even worse. Common words or simple phrase may leave the password well exposed to
+            brute force hacking attacks.
+        </p>
+        <br>
+        <h4>Avoid Obvious Character Substitutions:</h4>
+        <p>Avoid using common substitutions, eg:
+            pr3tty, wedne$day.
+        </p>
+    </section>
+
+
+
+
+<!-- FOOTER container -->
+    <footer id="footer__container">
+
+            <section id=footer__nav role="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </section>
+
+
+            <section id="footer__social" role="navigation">
+                <!--YOUTUBE----------->
+                <a href="https://google.com.au">
+                    <svg id="footer__youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" x="20"
+                        y="50">
+                        <path
+                            d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" />
+                    </svg>
+                </a>
+                <!--TWITTER------------>
+                <a href="https://google.com.au">
+                    <svg id="footer__twitter" role="img" viewBox="0 0 24 24" x="90" y="50" 
+                        xmlns="http://www.w3.org/2000/svg"><path
+                            d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z" />
+                    </svg>
+                </a>  
+            </section>
+
+
+            <section id="footer__copyright" role="link">
+                <a href="#main">Copyright &copy 2019</a>
+            </section>
+        </footer>
+
+
+
+    <script>generateALL()</script>
+
+</body>
+
+</html>

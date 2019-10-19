@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica;
+    font-size: 16px;
+}
+html,
+body{width: 100%;
+height:100%;
+background-color:grey;}
+
+
+/*  ///////////////     HERO CONTAINER     /////////////////  */
+/*  HERO IMAGE  */
+#hero__container {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, black, grey)
+}
+/*  HERO LOGO   */
+#hero__logo{
+    width: 80vw;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);            
+}
+#hero__logo h1{
+    font-size: 250%;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+#hero__button{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 50px;
+    background-color: rgba(0,0,0,0);
+    border: 3px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#hero__button:hover {
+    background-color: rgba(0,0,0,.6);
+    border: 3px solid white;
+    color: white;
+}
+
+
+
+/*  ///////////////     MAIN CONTAINER    /////////////////  */
+main{
+    min-height: 100%;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: lightgrey;
+    margin: 0 auto;    
+}
+.container__mainDisplay {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+    min-height: 400px;
+}
+.container__passwords {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Password_heading{color: darkslategrey;}
+.Password_result{font-weight:bold;color: black;}
+.Password_heading,
+.Password_result {font-size: 1.1rem;}
+
+#Generate_password{
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    border: 3px solid black;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+#Generate_password:hover {
+    background-color: rgba(0,0,0,.2);
+}
+
+
+
+/*  ///////////////     MEDIA QUERIES   /////////////////  */
+@media (min-width:300px ){
+    .Password_heading,
+    .Password_result{font-size: 1.1rem;}
+}
+@media (min-width:400px ){
+    .Password_heading,
+    .Password_result{font-size: 1.5rem;}
+}
+@media (min-width:500px ){
+    .Password_heading,
+    .Password_result{font-size: 1.7rem;}
+}
+@media (min-width:600px ){
+    .Password_heading,
+    .Password_result{font-size: 2rem;}
+}
+
+
+/*  ///////////////     INFO CONTAINER     /////////////////  */
+.Container__moreInfo{
+    padding: 4rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+}
+.Container__moreInfo span{
+    color: black;
+}
+.Container__moreInfo h3{
+    color: black;
+}
+
+
+/*  ///////////////     FOOTER CONTAINER    /////////////////  */
+#footer__container {
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    background-color: black;
+    font-family: Arial;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/*  common values to center items   */
+#footer__nav, 
+#footer__nav ul,
+#footer__social,
+#footer__copyright{
+    height: 100%;
+    width: 100%;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;}
+#footer__nav ul{list-style:none;  flex-direction: column;}
+#footer__nav a,        
+#footer__copyright a{text-decoration: none; color: white;}
+#footer__social{justify-content: space-between;}
+
+/*  common values for social icons  */
+#footer__youtube,
+#footer__twitter {fill: white; width:50px}
+
+#footer__nav a:hover,
+#footer__youtube:hover,
+#footer__twitter:hover,
+#footer__copyright a:hover {color:darkslategrey; fill: darkslategrey;}
+
+
+
+/*  /////////////// FOOTER MEDIA QUERIES  /////////////////  */
+/*  if you add more social media icons, then the max width will have to be altered in media queries else the icons will touch */
+@media screen and (max-width: 600px){
+    #footer__container {flex-direction: column;}
+    #footer__nav ul{flex-direction: row;}
+    #footer__social{justify-content: space-evenly;}
+}
